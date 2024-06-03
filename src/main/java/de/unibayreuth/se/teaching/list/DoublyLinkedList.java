@@ -154,21 +154,8 @@ public class DoublyLinkedList {
      * Add an element.
      * @param e Element to add
      */
-    public void add(Element e) {
-        if (isEmpty()) { append(e); }
-        else {
-            Element pos = begin; Element pred = null;
-            while (pos != null && pos.getValue() < e.getValue()) {
-                pred = pos; pos = pos.getNext();
-            }
-            if (pos == null) { append(e); }
-            else {
-                e.setNext(pos); pos.setPrev(e);
-                if (pred != null) { e.setPrev(pred); pred.setNext(e); }
-                else { begin = e; }
-                length++;
-            }
-        }
+    public void add (Element e) {
+        insert(e);
     }
 
     /**
