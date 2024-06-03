@@ -156,7 +156,7 @@ public class DoublyLinkedList {
      */
     public void add (Element e) {
         insert(e);
-        // just a change to be pushy
+        // being pushy again
     }
 
     /**
